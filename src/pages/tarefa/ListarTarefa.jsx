@@ -11,8 +11,10 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
+// import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+// import EditIcon from '@mui/icons-material/Edit';
+import BorderColorRoundedIcon from '@mui/icons-material/BorderColorRounded';
 import Modal from '@mui/material/Modal';
 
 import CriarTarefa from './CriarTarefa';
@@ -122,10 +124,10 @@ const ListarTarefa = () => {
                       <TableCell align="right">{row.statusTarefa}</TableCell>
                       <TableCell align="right">{row.recursoTarefa}</TableCell>
                       <TableCell align="center">
-                        <Button variant="contained" color="success" onClick={() => handleEditar(row.idTarefa)}><EditIcon fontSize="small" /></Button>            
+                        <Button variant="outlined" color="success" onClick={() => handleEditar(row.idTarefa)}><BorderColorRoundedIcon fontSize="small" /></Button>            
                       </TableCell>
                       <TableCell align="center">
-                        <Button variant="contained" color="error" onClick={() => handleDeletar(row.idTarefa)}><DeleteIcon fontSize="large" /></Button>            
+                        <Button variant="outlined" color="error" onClick={() => handleDeletar(row.idTarefa)}><DeleteForeverIcon fontSize="small" /></Button>            
                       </TableCell>
                     </TableRow>
                 ))}
